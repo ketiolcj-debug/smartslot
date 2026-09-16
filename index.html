@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#06110d">
+<title>SmartSlot 5</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div class="app">
+<header><div><small>PREMIUM SLOT</small><h1>SMART<span>SLOT</span> <b>5</b></h1></div><button id="profileBtn">◉</button></header>
+
+<section class="user">
+<div class="avatar" id="avatar">S</div><div class="who"><small>WELCOME BACK</small><strong id="playerName">Player</strong></div>
+<div class="bal"><small>WALLET</small><b id="balance">0.00</b><i>ETB</i></div>
+</section>
+
+<nav>
+<button class="tab active" data-screen="game">🎰 Game</button>
+<button class="tab" data-screen="wallet">💳 Wallet</button>
+<button class="tab" data-screen="history">📜 History</button>
+<button class="tab" data-screen="profile">👤 Profile</button>
+</nav>
+
+<section id="screen-game" class="screen active">
+<div class="title"><div><small>5 FIXED PAYLINES</small><h2>Multi Hot <em>5</em></h2></div><button id="payBtn" class="ghost">PAYTABLE</button></div>
+<div class="machine">
+<div class="mult-head"><label>MULTIPLIER</label><div id="mults"></div></div>
+<div class="reels-wrap"><div id="reels"><div class="reel"><div class="strip"></div></div><div class="reel"><div class="strip"></div></div><div class="reel"><div class="strip"></div></div></div><div id="lines"></div></div>
+<div id="status">Place your bet and spin.</div>
+<div class="stats"><div><small>BALANCE</small><b id="gameBalance">0.00</b><i>ETB</i></div><div><small>WIN</small><b id="lastWin">0.00</b><i>ETB</i></div><div><small>BET</small><b id="betInfo">10.00</b><i>ETB</i></div></div>
+<div class="controls"><button class="round" id="betDown">−</button><button class="bet-side" id="betPrev">5 ETB</button><button class="spin" id="spinBtn"><b>SPIN</b><small>10 ETB</small></button><button class="bet-side" id="betNext">25 ETB</button><button class="round" id="betUp">+</button></div>
+<div class="quick"><button id="autoBtn">↻ <small>AUTO</small></button><button id="gambleBtn" class="disabled">2× <small>GAMBLE</small></button><button id="collectBtn" class="disabled">✓ <small>COLLECT</small></button></div>
+</div>
+<div class="notice">🔒 <span><b>Secure wallet</b><br>Real balances and authoritative results must be processed by a secure backend.</span></div>
+</section>
+
+<section id="screen-wallet" class="screen">
+<div class="section"><small>ACCOUNT</small><h2>Wallet</h2></div>
+<div class="wallet-hero"><small>AVAILABLE BALANCE</small><strong id="walletBalance">0.00 ETB</strong><div><button>＋ Deposit</button><button>↗ Withdraw</button></div></div>
+<div class="card"><h3>Telebirr Deposit</h3><p>Send money to the Telebirr account below, then enter the amount and transaction ID. Balance changes only after admin approval.</p>
+<div class="tele"><small>TELEBIRR</small><b>0920384625</b><strong>kenea</strong></div>
+<label>Amount (ETB)<input id="depositAmount" type="number" min="1" step="1" placeholder="Enter amount"></label>
+<label>Transaction ID<input id="depositTx" type="text" placeholder="Enter transaction ID"></label>
+<button class="primary" id="depositSubmit">Submit deposit</button><div id="depositMsg" class="msg"></div></div>
+<div class="card"><h3>Withdraw to Telebirr</h3><p>Withdrawal requests are reviewed by admin before payment.</p>
+<label>Amount (ETB)<input id="withdrawAmount" type="number" min="1" step="1" placeholder="Enter amount"></label>
+<label>Telebirr phone<input id="withdrawPhone" type="tel" placeholder="09xxxxxxxx"></label>
+<button class="primary" id="withdrawSubmit">Submit withdrawal</button><div id="withdrawMsg" class="msg"></div></div>
+</section>
+
+<section id="screen-history" class="screen"><div class="section"><small>ACCOUNT</small><h2>History</h2></div><div id="history"><div class="empty">No transactions yet.</div></div></section>
+
+<section id="screen-profile" class="screen"><div class="section"><small>PLAYER</small><h2>Profile</h2></div>
+<div class="profile"><div class="avatar big" id="profileAvatar">S</div><h3 id="profileName">Player</h3><p id="profileUsername">Telegram player</p><div class="profile-grid"><div><small>GAMES</small><b id="games">0</b></div><div><small>TOTAL WON</small><b id="totalWon">0.00 ETB</b></div></div></div>
+<div class="card"><h3>Telegram verification</h3><p id="contactState">Use the bot's contact-sharing button to verify your Telegram phone number.</p><button class="primary" id="contactBtn">Share contact in Telegram</button></div>
+</section>
+<footer>SMARTSLOT 5 · PLAY RESPONSIBLY</footer>
+</div>
+
+<div class="modal" id="payModal"><div class="modal-card"><button class="close" data-close="payModal">×</button><small>ORIGINAL GAME PAYTABLE</small><h2>Paytable</h2><div id="payRows"></div><p>5 fixed paylines: 3 rows + 2 diagonals. Line win = (bet ÷ 5) × symbol value × multiplier.</p></div></div>
+<div class="modal" id="gambleModal"><div class="modal-card"><button class="close" data-close="gambleModal">×</button><small>OPTIONAL</small><h2>Gamble</h2><p>Guess the card color to double the current win.</p><div class="cardface">★</div><div class="gamble"><button id="red">♥ RED</button><button id="black">♠ BLACK</button></div><button class="secondary" id="takeWin">TAKE WIN</button></div></div>
+<script src="app.js"></script>
+</body></html>
