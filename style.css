@@ -1,0 +1,42 @@
+:root{
+  --bg:#061c13;--panel:#0b2a1c;--panel2:#103724;--gold:#ffd24a;--red:#d7263d;
+  --green:#62f59a;--muted:#91b3a0;--line:#28563e;--white:#fff8e9;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:radial-gradient(circle at 50% -10%,#16452d 0,#061c13 48%,#03100a 100%);color:var(--white);font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+button,input{font:inherit}button{cursor:pointer}
+.app{width:min(100%,520px);margin:auto;padding:16px 14px 34px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.eyebrow{font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:800}
+h1{font-family:Georgia,serif;font-size:30px;margin:3px 0;background:linear-gradient(#fff3c4,#ffd24a);-webkit-background-clip:text;color:transparent}
+h1 span{color:#ff6f9f}
+.avatar,.big-avatar{border:2px solid var(--gold);background:#153e2b;display:grid;place-items:center;font-weight:900;color:var(--gold)}
+.avatar{width:42px;height:42px;border-radius:50%}.big-avatar{width:72px;height:72px;border-radius:50%;margin:auto;font-size:28px}
+.wallet-card,.payment-card,.profile-card{background:linear-gradient(145deg,#0d3422,#082318);border:1px solid var(--line);border-radius:18px;padding:15px;margin-bottom:12px}
+.wallet-card{display:flex;justify-content:space-between;align-items:center}
+.muted,.payment-card p,.profile-card p,.note{color:var(--muted);font-size:12px}
+.balance{font-size:27px;font-weight:900;margin-top:3px}.balance small{font-size:11px;color:var(--gold)}
+.icon-btn,.round{border:1px solid #456b56;background:#102f20;color:var(--gold);min-width:44px;height:44px;border-radius:50%}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:10px 0}
+.tab,.quick button{border:1px solid var(--line);background:#09251a;color:var(--muted);padding:10px 5px;border-radius:10px;font-size:11px;font-weight:800}
+.tab.active{background:var(--gold);color:#372500;border-color:var(--gold)}
+.hidden{display:none!important}
+.machine-head{display:flex;justify-content:space-between;align-items:center;margin:12px 2px}
+.machine-head small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.multiplier{color:var(--gold);font-size:24px;font-weight:900}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;border:2px solid #8b6820;border-radius:14px;padding:7px;background:#04150d;box-shadow:inset 0 0 30px #000}
+.reel{height:170px;display:grid;grid-template-rows:repeat(3,1fr);gap:4px;background:#0e3a25;border-radius:9px;padding:4px;overflow:hidden}
+.cell{display:grid;place-items:center;border:1px solid #244e38;border-radius:7px;background:#0a2b1c;font-size:35px}
+.cell.win{animation:win .5s ease-in-out infinite alternate;border-color:var(--gold)}
+@keyframes win{to{transform:scale(1.07);box-shadow:0 0 18px #ffd24a}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}.stats div{background:#061910;border:1px solid #214934;border-radius:9px;text-align:center;padding:7px}.stats span{display:block;color:var(--muted);font-size:9px;letter-spacing:1px}.stats b{color:var(--gold);font-size:14px}
+.message{text-align:center;min-height:27px;padding:8px;color:var(--green);font-weight:800}.message.lose{color:#ff9da9}
+.bet-controls{display:flex;align-items:center;justify-content:center;gap:6px}.bet-preview{min-width:54px;height:42px;border-radius:10px;border:1px solid #476b57;background:#0d2e1f;color:#d8c78f;font-size:12px}.spin{width:92px;height:92px;border:2px solid var(--gold);border-radius:28px;clip-path:polygon(50% 0,100% 22%,100% 78%,50% 100%,0 78%,0 22%);background:linear-gradient(#ff6559,#9d1729);color:white}.spin strong{display:block;font-size:17px;letter-spacing:2px}.spin small{color:#ffe18b}.quick{display:flex;justify-content:center;gap:10px;margin-top:12px}.quick button{padding:8px 18px}
+.section-title{font-size:18px;font-weight:900;margin:16px 2px}
+.payment-card h3{margin:0 0 6px}.receiver{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#061910;border:1px dashed #55745e;padding:11px;border-radius:12px;margin:10px 0}.receiver strong{grid-column:1/-1;color:var(--gold);font-size:12px}
+label{display:block;color:#c8dfd0;font-size:12px;margin:10px 0}input{width:100%;margin-top:6px;padding:12px;border-radius:11px;border:1px solid #3b604b;background:#061b12;color:white;outline:none}input:focus{border-color:var(--gold)}
+.primary{width:100%;border:0;background:var(--gold);color:#3c2900;font-weight:900;padding:12px;border-radius:11px;margin-top:5px}.form-msg{min-height:18px;font-size:12px;color:var(--green);margin-top:7px}
+.history-item{background:#09261a;border:1px solid var(--line);border-radius:13px;padding:11px;margin:7px 0;display:flex;justify-content:space-between;gap:8px}.history-item small{display:block;color:var(--muted)}.status{font-size:10px;font-weight:900;text-transform:uppercase}.pending{color:#ffd24a}.approved{color:#63f59b}.rejected{color:#ff8491}
+.profile-card{text-align:center}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:15px}.profile-grid div{background:#061910;border-radius:10px;padding:10px}.profile-grid span{display:block;color:var(--muted);font-size:10px}.profile-grid b{font-size:14px;color:var(--gold)}.verified{margin-top:12px;color:var(--green);font-size:12px}
+.modal{position:fixed;inset:0;background:#000b;display:grid;place-items:center;padding:18px;z-index:10}.modal-box{position:relative;width:min(100%,390px);max-height:85vh;overflow:auto;background:#0a2c1d;border:1px solid #8b6820;border-radius:18px;padding:20px}.close{position:absolute;right:12px;top:10px;background:none;border:0;color:white;font-size:25px}.modal-box h2{color:var(--gold);margin-top:0}.payrow{display:flex;justify-content:space-between;padding:9px 2px;border-bottom:1px dashed #2b513e;font-size:13px}.payrow b{color:var(--gold)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#102f20;border:1px solid var(--gold);color:white;padding:11px 15px;border-radius:12px;z-index:20;font-size:12px;max-width:90%}
+@media(max-width:350px){.reel{height:145px}.cell{font-size:29px}.spin{width:82px;height:82px}.bet-preview{min-width:45px}}
