@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  >
+
+  <title>SmartSlot Admin</title>
+
+  <link rel="stylesheet" href="./admin.css">
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+
+      <div>
+        <div class="brand">
+          SMARTSLOT
+        </div>
+
+        <div class="subtitle">
+          Admin Approval Panel
+        </div>
+      </div>
+
+      <button id="refreshBtn" class="refresh">
+        ↻
+      </button>
+
+    </header>
+
+
+    <!-- ADMIN STATUS -->
+
+    <div id="status" class="status">
+      Checking admin access...
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <section class="summary">
+
+      <div class="summary-card">
+        <span>Deposits</span>
+        <strong id="depositCount">0</strong>
+      </div>
+
+      <div class="summary-card">
+        <span>Withdrawals</span>
+        <strong id="withdrawCount">0</strong>
+      </div>
+
+    </section>
+
+
+    <!-- DEPOSITS -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <div>
+          <h2>💰 Pending Deposits</h2>
+          <p>Review player deposit requests</p>
+        </div>
+
+      </div>
+
+      <div id="deposits" class="requests">
+
+        <div class="loading">
+          Loading deposits...
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WITHDRAWALS -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <div>
+          <h2>💸 Pending Withdrawals</h2>
+          <p>Review Telebirr withdrawal requests</p>
+        </div>
+
+      </div>
+
+      <div id="withdrawals" class="requests">
+
+        <div class="loading">
+          Loading withdrawals...
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="footer">
+      SmartSlot Admin
+    </div>
+
+  </div>
+
+
+  <!-- CONFIRM MODAL -->
+
+  <div id="confirmModal" class="modal">
+
+    <div class="modal-box">
+
+      <h3 id="modalTitle">
+        Confirm action
+      </h3>
+
+      <p id="modalText">
+        Are you sure?
+      </p>
+
+      <div class="modal-buttons">
+
+        <button
+          id="cancelBtn"
+          class="btn cancel"
+        >
+          Cancel
+        </button>
+
+        <button
+          id="confirmBtn"
+          class="btn approve"
+        >
+          Confirm
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="./admin.js"></script>
+
+</body>
+        </html>
