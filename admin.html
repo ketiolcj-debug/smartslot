@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartSlot 5 Admin</title>
+  <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div>
+      <h1>SmartSlot 5</h1>
+      <p>Admin Panel</p>
+    </div>
+
+    <button id="logoutBtn" class="logout hidden">
+      Logout
+    </button>
+  </header>
+
+  <!-- LOGIN -->
+  <section id="loginScreen" class="login-card">
+
+    <div class="lock">🔐</div>
+
+    <h2>Admin Login</h2>
+    <p class="muted">Enter your administrator password.</p>
+
+    <input
+      id="adminPassword"
+      type="password"
+      placeholder="Admin password"
+      autocomplete="current-password"
+    >
+
+    <button id="loginBtn" class="primary">
+      Login
+    </button>
+
+    <p id="loginError" class="error"></p>
+
+  </section>
+
+
+  <!-- ADMIN -->
+  <main id="adminScreen" class="hidden">
+
+    <section class="stats">
+
+      <div class="stat">
+        <span>💰</span>
+        <strong id="depositCount">0</strong>
+        <small>Pending Deposits</small>
+      </div>
+
+      <div class="stat">
+        <span>💸</span>
+        <strong id="withdrawCount">0</strong>
+        <small>Pending Withdrawals</small>
+      </div>
+
+    </section>
+
+
+    <div class="toolbar">
+      <h2>Transactions</h2>
+
+      <button id="refreshBtn" class="refresh">
+        🔄 Refresh
+      </button>
+    </div>
+
+
+    <!-- DEPOSITS -->
+
+    <section class="panel">
+
+      <div class="panel-title">
+        <h3>💰 Pending Deposits</h3>
+      </div>
+
+      <div id="depositList">
+        <div class="empty">
+          No pending deposits.
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- WITHDRAWALS -->
+
+    <section class="panel">
+
+      <div class="panel-title">
+        <h3>💸 Pending Withdrawals</h3>
+      </div>
+
+      <div id="withdrawList">
+        <div class="empty">
+          No pending withdrawals.
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- PLAYERS -->
+
+    <section class="panel">
+
+      <div class="panel-title">
+        <h3>👥 Players</h3>
+
+        <button id="playersBtn" class="small-btn">
+          Load Players
+        </button>
+      </div>
+
+      <div id="playerList">
+        <div class="empty">
+          Press "Load Players" to view players.
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="./admin.js"></script>
+
+</body>
+</html>
