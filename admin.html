@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>SmartSlot 5 Admin</title>
+
+  <link
+    rel="stylesheet"
+    href="admin.css"
+  >
+</head>
+
+<body>
+
+  <!-- ==============================
+       LOGIN
+  =============================== -->
+
+  <section
+    id="loginScreen"
+    class="login-screen"
+  >
+
+    <div class="login-card">
+
+      <div class="logo">
+        SMARTSLOT 5
+      </div>
+
+      <div class="admin-title">
+        ADMIN PANEL
+      </div>
+
+      <p class="subtitle">
+        Secure administrator login
+      </p>
+
+      <input
+        id="adminPassword"
+        type="password"
+        placeholder="Admin password"
+        autocomplete="current-password"
+      >
+
+      <button
+        id="loginBtn"
+        type="button"
+        class="primary-btn"
+      >
+        Login
+      </button>
+
+      <div
+        id="loginError"
+        class="error"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==============================
+       ADMIN PANEL
+  =============================== -->
+
+  <section
+    id="adminScreen"
+    class="admin-screen hidden"
+  >
+
+    <header class="topbar">
+
+      <div>
+        <div class="brand">
+          SMARTSLOT 5
+        </div>
+
+        <div class="admin-label">
+          ADMIN PANEL
+        </div>
+      </div>
+
+      <button
+        id="logoutBtn"
+        type="button"
+        class="logout-btn hidden"
+      >
+        Logout
+      </button>
+
+    </header>
+
+
+    <main class="container">
+
+      <!-- ACTION BAR -->
+
+      <div class="toolbar">
+
+        <button
+          id="refreshBtn"
+          type="button"
+          class="tool-btn"
+        >
+          🔄 Refresh
+        </button>
+
+        <button
+          id="playersBtn"
+          type="button"
+          class="tool-btn"
+        >
+          👥 Players
+        </button>
+
+      </div>
+
+
+      <!-- ==========================
+           DEPOSITS
+      =========================== -->
+
+      <section class="panel">
+
+        <div class="panel-header">
+
+          <div>
+            <h2>
+              💰 Pending Deposits
+            </h2>
+
+            <p>
+              Review player deposit requests
+            </p>
+          </div>
+
+          <span
+            id="depositCount"
+            class="count"
+          >
+            0
+          </span>
+
+        </div>
+
+        <div
+          id="depositList"
+          class="list"
+        >
+          <div class="empty">
+            No pending deposits.
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ==========================
+           WITHDRAWALS
+      =========================== -->
+
+      <section class="panel">
+
+        <div class="panel-header">
+
+          <div>
+            <h2>
+              💸 Pending Withdrawals
+            </h2>
+
+            <p>
+              Review Telebirr withdrawal requests
+            </p>
+          </div>
+
+          <span
+            id="withdrawCount"
+            class="count"
+          >
+            0
+          </span>
+
+        </div>
+
+        <div
+          id="withdrawList"
+          class="list"
+        >
+          <div class="empty">
+            No pending withdrawals.
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ==========================
+           PLAYERS
+      =========================== -->
+
+      <section
+        id="playersPanel"
+        class="panel"
+      >
+
+        <div class="panel-header">
+
+          <div>
+            <h2>
+              👥 Players
+            </h2>
+
+            <p>
+              Registered SmartSlot players
+            </p>
+          </div>
+
+        </div>
+
+        <div
+          id="playerList"
+          class="list"
+        >
+          <div class="empty">
+            Press Players to load players.
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="footer">
+      SmartSlot 5 Admin
+    </footer>
+
+  </section>
+
+
+  <script src="admin.js"></script>
+
+</body>
+</html>
